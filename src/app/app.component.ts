@@ -39,8 +39,14 @@ export class AppComponent {
       'name': this.name,
       'address': this.address,
       'salary': this.salary,
-      'registerDate':new Date()
+      'registerDate': new Date()
     });
     console.log(this.customers);
+  }
+
+  deleteCustomer(index: number) {
+    if (confirm("Are you sure to delete?")) {
+      this.customers.splice(index, 1);
+    }
   }
 }
