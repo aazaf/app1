@@ -1,0 +1,24 @@
+.outer{
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner{
+  width: 400px;
+  height: auto;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+button{
+  width: 100%;
+}
+
+.alert{
+  text-align: center;
+  font-weight: bold;
+}
