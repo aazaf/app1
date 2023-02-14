@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {ToastrService} from "ngx-toastr";
 
 export interface Customer {
   name: string;
@@ -14,6 +15,9 @@ export interface Customer {
 })
 
 export class AppComponent {
+
+  constructor(private toastrService: ToastrService) {
+  }
 
   customers: Customer [] = [];
 
@@ -47,6 +51,17 @@ export class AppComponent {
   deleteCustomer(index: number) {
     if (confirm("Are you sure to delete?")) {
       this.customers.splice(index, 1);
+    }
+  }
+
+  popup(message: string, title: string, type: string) {
+    switch (type) {
+      case "success" :
+        this.toastrService.success(message, title);
+        break;
+      case "error":
+      case "warning":
+
     }
   }
 }

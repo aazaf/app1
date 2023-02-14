@@ -5,6 +5,7 @@ import {StudentComponent} from "./student/student.component";
 import {TeacherComponent} from "./teacher/teacher.component";
 import {AppComponent} from "./app.component";
 import {FormsModule} from "@angular/forms";
+import {ToastrModule, ToastrService} from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {FormsModule} from "@angular/forms";
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ToastrModule
   ],
   providers: [],
   bootstrap: [AppComponent]
