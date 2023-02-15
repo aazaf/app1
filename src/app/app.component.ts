@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ToastrService} from "ngx-toastr";
+// import {ToastrService} from "ngx-toastr";
 
 export interface Customer {
   name: string;
@@ -16,8 +16,8 @@ export interface Customer {
 
 export class AppComponent {
 
-  constructor(private toastrService: ToastrService) {
-  }
+  // constructor(private toastrService: ToastrService) {
+  // }
 
   customers: Customer [] = [];
 
@@ -54,14 +54,14 @@ export class AppComponent {
     }
   }
 
-  popup(message: string, title: string, type: string) {
-    switch (type) {
-      case "success" :
-        this.toastrService.success(message, title);
-        break;
-      case "error":
-      case "warning":
-
-    }
-  }
+  // popup(message: string, title: string, type: string) {
+  //   switch (type) {
+  //     case "success" :
+  //       this.toastrService.success(message, title);
+  //       break;
+  //     case "error":
+  //     case "warning":
+  //
+  //   }
+  // }
 }
